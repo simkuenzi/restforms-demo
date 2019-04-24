@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Demo Form</title>
+</head>
+<body>
+    <div>
+    <form method="post">
+        <p>
+            <div><label for="text">text</label></div>
+            <div>
+                <input id="text" name="text" type="text" th:value="${form.text}" th:style="${form.text.valid}? '' : 'background-color: red'" />
+                <div th:text="${form.text.message}" style="color: red">
+                </div>
+            </div>
+        <p>
+            <div><label for="mandatoryText">mandatoryText</label></div>
+            <div>
+                <input id="mandatoryText" name="mandatoryText" type="text" th:value="${form.mandatoryText}" th:style="${form.mandatoryText.valid}? '' : 'background-color: red'" />
+                <div th:text="${form.mandatoryText.message}" style="color: red">
+                </div>
+            </div>
+        <p>
+            <div><label for="decimal">decimal</label></div>
+            <div>
+                <input id="decimal" name="decimal" type="text" th:value="${form.decimal}" th:style="${form.decimal.valid}? '' : 'background-color: red'" />
+                <div th:text="${form.decimal.message}" style="color: red">
+                    Invalid number
+                </div>
+            </div>
+        <p>
+            <span th:if="${form.valid} == false" th:text="${form.message}" style="color: red">Invalid Input</span>
+            <button type="submit">Submit</button>
+        </p>
+    </form>
+    </div>
+</body>
+</html>

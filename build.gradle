@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+    id "org.gretty" version "2.3.1"
+}
+
+group 'com.github.simkuenzi'
+version '0.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile (group: 'com.github.simkuenzi', name: 'restforms', version: '0.3') {
+        exclude group: 'javax.ws.rs', module: '*'
+    }
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
+    compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
