@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.github.simkuenzi', name: 'restforms', version: '0.4-SNAPSHOT'
+    compile group: 'com.github.simkuenzi', name: 'restforms', version: '0.7-SNAPSHOT'
     compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.7'
     compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.7'
     compile group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.11.RELEASE'
